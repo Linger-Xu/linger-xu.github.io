@@ -1,384 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>300天啦！！！</title>
+    <title>Xu Lin | Computer Science Student</title>
     <style>
-        * {
-            padding: 0;
-            margin: 0;
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --light: #ecf0f1;
+            --dark: #1a252f;
+            --text: #333;
+            --background: #f9f9f9;
         }
-
-        .shell {
-            width: 100%;
-            position: relative;
-            padding: 80px 0;
-            transition: 0.3s ease 0s;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-        .shell:before {
-            position: absolute; 
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(99, 99, 99, 0.8);
-            content: "";
-        }
-
-        .header {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 80px;
-            position: relative;
-        }
-
-        .title {
-            color: #fff;
-            font-size: 46px;
-            font-weight: normal;
-            margin: 0;
-        }
-
-        .timeline {
-            display: flex;
+        
+        body {
+            font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            max-width: 900px;
             margin: 0 auto;
-            flex-wrap: wrap;
-            flex-direction: column;
-            max-width: 700px;
-            position: relative;
+            padding: 2rem;
+            background-color: var(--background);
         }
-
-        .content-title {
-            font-weight: normal;
-            font-size: 66px;
-            margin: -10px 0 0 0;
-            transition: 0.4s;
-            padding: 0 10px;
-            box-sizing: border-box;
-            color: #fff;
-        }
-
-        .content-desc {
-            margin: 0;
-            font-size: 15px;
-            box-sizing: border-box;
-            color: rgba(255, 255, 255, 0.7);
-            line-height: 25px;
-        }
-
-        .timeline:before {
-            position: absolute;
-            left: 50%;
-            width: 2px;
-            height: 100%;
-            margin-left: -1px;
-            content: "";
-            background: rgba(255, 255, 255, 0.07);
-        }
-
-        .item {
-            padding: 40px 0;
-            opacity: 0.3;
-            filter: blur(2px);
-            transition: 0.5s;
-            box-sizing: border-box;
-            width: calc(50% - 40px);
-            display: flex;
-            position: relative;
-            transform: translateY(-80px);
-        }
-
-        .item:before {
-            content: attr(data-text);
-            letter-spacing: 3px;
-            width: 100%;
-            position: absolute;
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 13px;
-            border-left: 2px solid rgba(255, 255, 255, 0.5);
-            top: 70%;
-            margin-top: -5px;
-            padding-left: 15px;
-            opacity: 0;
-            right: calc(-100% - 56px);
-            font: 900 20px '';
-            letter-spacing: 5px;
-        }
-
-        .item:nth-child(even) {
-            align-self: flex-end;
-        }
-
-        .item:nth-child(even):before {
-            right: auto;
-            text-align: right;
-            left: calc(-100% - 56px);
-            padding-left: 0;
-            border-left: none;
-            border-right: 2px solid rgba(255, 255, 255, 0.5);
-            padding-right: 15px;
-        }
-
-        .item--active {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0px);
-        }
-
-        .item--active:before {
-            top: 50%;
-            transition: 0.3s all 0.2s;
-            opacity: 1;
-        }
-
-        .item--active .content-title {
-            margin: -50px 0 20px 0;
-        }
-
-        .img {
-            max-width: 100%;
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
-        }
-
-        .subtitle {
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 16px;
-            letter-spacing: 5px;
-            margin: 10px 0 0 0;
-            font-weight: normal;
-        }
-
-        .footer {
-            padding: 95px 0;
+        
+        header {
             text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
         }
-
-        .footer a {
-            color: #999;
-            display: inline-block;
+        
+        h1 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
         }
-
-        @media only screen and (max-width: 767px) {
-            .item {
-                align-self: baseline !important;
-                width: 100%;
-                padding: 0 30px 150px 80px;
-            }
-
-            .item:before {
-                left: 10px !important;
-                padding: 0 !important;
-                top: 50px;
-                text-align: center !important;
-                width: 60px;
-                border: none !important;
-            }
-
-            .item:last-child {
-                padding-bottom: 40px;
-            }
+        
+        .subtitle {
+            color: var(--secondary);
+            font-weight: 400;
+            margin-bottom: 1rem;
         }
-
-        @media only screen and (max-width: 767px) {
-            .timeline:before {
-                left: 40px;
+        
+        .contact-info {
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .contact-info a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .contact-info a:hover {
+            color: var(--primary);
+            text-decoration: underline;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        .project {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .project:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .project-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .project-links {
+            margin: 0.5rem 0;
+        }
+        
+        .project-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            margin-right: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .project-description {
+            margin-top: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            section {
+                padding: 1rem;
             }
         }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <div class="shell" id="shell">
-        <div class="header">
-            <h2 class="title">哥哥最最最最...(省略n个最)爱的猫猫：</h2>
-            <h3 class="subtitle">Love</h3>
+    <header>
+        <h1>Xu Lin</h1>
+        <p class="subtitle">Undergraduate in Computer Science and Technology</p>
+        <p class="subtitle">College of Computer Science and Technology, Jilin University, Changchun 130012, China</p>
+        
+        <div class="contact-info">
+            <a href="mailto:linxu1721@mails.jlu.edu.cn">linxu1721@mails.jlu.edu.cn</a>
+            <a href="mailto:jiu_linxu@163.com">jiu_linxu@163.com</a>
+            <a href="https://linger-xu.github.io" target="_blank">Personal Homepage</a>
         </div>
-        <div class="timeline">
-            <div class="item" data-text="第一次收到这种信吧！">
-                <div class="content">
-                    <img src="./01.jpg" alt="" class="img">
-                    <h2 class="content-title">1</h2>
-                    <p class="content-desc">
-                        当你看到这封信的时候，这封信应该还在路上哈哈哈哈哈，最近真的太忙啦！给你写信得慢慢写。花朵需要精心护养，而你比我所见过的任何一朵花都要美丽自然，写给最美花朵的寄语要慢慢用爱意浇铸。
-                    </p>
-                </div>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am an undergraduate student at Jilin University majoring in Computer Science and Technology (expected graduation in 2026). My academic interests include artificial intelligence, computer systems, and algorithm design. I have maintained a GPA of 3.90/4.0 (ranking top 1% in my department) and received multiple national scholarships.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Research Projects</h2>
+        
+        <div class="project">
+            <div class="project-title">Multimodal Fusion-based Emotion Recognition Dataset and Model Construction</div>
+            <div class="project-links">
+                <a href="#" target="_blank">[Repository]</a>
+                <a href="#" target="_blank">[Paper]</a>
             </div>
-
-            <div class="item" data-text="真的快要一年啦！">
-                <div class="content">
-                    <img src="./02.jpg" alt="" class="img">
-                    <h2 class="content-title">2</h2>
-                    <p class="content-desc">
-                        亲爱的猫猫，三百天啦！你知道这意味着什么吗？意味着我们已经快要走过一个完整的春、夏、秋、冬啦！最让我开心的是，我们一起畅想过的很多事正在或已经成为了现实。我们在盛夏时分在雨中相拥，在无人的街道亲吻。在秋风中相互依偎，共同见证事业的成功。在寒冬中让炽热的体温传递，在汪洋中支起小舟。在冰雪消融的春天里遥寄思念。
-                    </p>
-                </div>
+            <div class="project-description">
+                Designed an emotion recognition model using attention mechanisms to extract audio and video features, with disentangled representation learning to capture cross-modal correlations. Achieved 48.47% accuracy on the challenging VE-8 dataset. This project won the Gold Award in Jilin Province at the China International College Students' Innovation Competition (2024) and was rated as a National College Student Innovation Project.
             </div>
-
-            <div class="item" data-text="一起生活！">
-                <div class="content">
-                    <img src="./03.jpg" alt="" class="img">
-                    <h2 class="content-title">3</h2>
-                    <p class="content-desc">
-                        我们有了好多的第一次并将有无数次，我们会像每一对寻常夫妻一样在相拥中醒来，穿着宽松的衣服并持着惺忪的睡眼，在新生日的开端走入烟火，寻味清欢。我们会在每一个节日相聚，尽管可能只分开了几个小时，但我仍要假借节日之名，一遍遍地看你，一遍遍地亲吻你，一遍遍地向你索取。
-                    </p>
-                </div>
-            </div>
-
-            <div class="item" data-text="在城市中有我们的归处！">
-                <div class="content">
-                    <img src="./04.jpg" alt="" class="img">
-                    <h2 class="content-title">4</h2>
-                    <p class="content-desc">
-                        我们会在临江的闹市区有我们的小家，在毛坯房里抱着你转圈，然后把你揉进我的身体，我们会一步步挑选喜欢的家具，设计装修，把我们的想象洒进油料，抹向未来，我们还会在家中设计只有你我知晓的神秘趣味，在别人疑然地问起时相视一笑。养一只猫，养一只狗，在黄昏镀满落地窗前时拥抱，看着城市形形色色的人，而我们，去掉“形形”。
-                    </p>
-                </div>
-            </div>
-
-            <div class="item" data-text="去每一个想去的地方！">
-                <div class="content">
-                    <img src="./05.jpg" alt="" class="img">
-                    <h2 class="content-title">5</h2>
-                    <p class="content-desc">
-                        一年，要去两次海边，你爱海，我爱你，于是海自然成了我的心头好，呼吸，远眺，牵着手让海浪没过脚踝，让海水消解盛夏的炎热并点燃心中的燥热。拉上一大帮人，到野外露营，夏天我们就支起烤架让果木的香味杂糅食材的香气带着我们融于自然，若是下雨，便支起大帐篷，煮一锅热乎的，然后在欢笑声中听雨、淋雨、煮雨。
-                    </p>
-                </div>
-            </div>
-
-            <div class="item" data-text="好好吃饭！">
-                <div class="content">
-                    <img src="./06.jpg" alt="" class="img">
-                    <h2 class="content-title">6</h2>
-                    <p class="content-desc">
-                        我学好多好多的烹饪技巧，一要调理好你的身子，二要牢牢锁住你的心，三要开发更多场景(bushi）...一日三餐，人间万事，不过如此，人生本质是饭搭子的组合，哥哥想做你的终生饭搭子哈哈哈哈，最近突然喜欢上了做菜，虽然在学校没条件至少可以先码着哈哈哈
-                    </p>
-                </div>
-            </div>
-
-            <div class="item" data-text="期待qwq">
-                <div class="content">
-                    <img src="./07.jpg" alt="" class="img">
-                    <h2 class="content-title">7</h2>
-                    <p class="content-desc">
-                        亲爱的猫猫，未来会是什么样的呢？我们什么时候会结婚呢，什么时候可以天天在一起呢，什么时候可以“看到就一起出发，想到就一起去做”呢？未来的日子真令人期待呢。愿我们那时依旧年轻，依旧充满热情与活力，依旧对生活保持最纯真的喜爱。我读书、写作、浇花，你奏乐、起舞。我们，只有我们，不为任何功利的、急迫的事所裹挟，我们预想走到终点的两人，那是我们吗？那就是我们！
-                    </p>
-                </div>
-            </div>
-
-            <div class="item" data-text="岁岁年年，至死不渝！">
-                <div class="content">
-                    <img src="./08.jpg" alt="" class="img">
-                    <h2 class="content-title">8</h2>
-                    <p class="content-desc">
-                        未来之事不可预料，但我想只要我的心脏依然在剧烈地跳动，汹涌的爱便如火，烧那棘，烧那荆，止剩破碎的焦土，待我走过，以爱为种，以心为锄，以情为肥。翻动那焦黑的上，松散的地，风雨若来，便以风逐贫食的鸟，以雨作生命的泉。待你我相见，便牵你的手，回首，一路生花。愿我们岁岁年年，至死不渝。
-                        ——爱你的哥哥
-                    </p>
-                </div>
-            </div>
-
-            <div class="timeline">
-                <div class="item" data-text="这是彩蛋qwq">
-                    <div class="content">
-                        <img src="./09.jpg" alt="" class="img">
-                        <h2 class="content-title">9</h2>
-                        <p class="content-desc">
-                            多出来的两段是为了电脑上看的时候可以把信给看完全（电脑上滑不到最后两段），不过猫猫肯定是用手机看的qwq
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="item" data-text="这是彩蛋qwq">
-                    <div class="content">
-                        <img src="./10.jpg" alt="" class="img">
-                        <h2 class="content-title">10</h2>
-                        <p class="content-desc">
-                            日子总是如此的刚好，今天是高考的第一天，我急匆匆地走进了考场，闷热的风带着黏腻的感觉一次次地向我确认盛夏的到来？在等待发卷子的时候，我呆呆地望着窗外，不一会，我稍稍舒了口气，“我的女孩，在等我呢！”
-                        </p>
-                    </div>
-                </div>
-
         </div>
-    </div>
+        
+        <div class="project">
+            <div class="project-title">Hex Game Robot Based on Monte Carlo Tree Search (MCTS)</div>
+            <div class="project-links">
+                <a href="#" target="_blank">[Repository]</a>
+            </div>
+            <div class="project-description">
+                Developed a Hex game AI using Monte Carlo Tree Search as the core algorithm, enhanced with max-flow evaluation function and expert strategies ("bridge" operations). Ranked #26 on the botzone platform Hex leaderboard (as of 2025.04.01). Won the National First Prize in the 2024 China Collegiate Computing Contest (Hex category).
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Qile Longlong - CPU Based on LoongArch32 Reduced Instruction Set</div>
+            <div class="project-links">
+                <a href="#" target="_blank">[Repository]</a>
+            </div>
+            <div class="project-description">
+                Designed a processor implementing the LoongArch32 reduced instruction set with a 6-stage pipeline, supporting 72 integer and privileged instructions (excluding floating-point). Implemented exception and interrupt mechanisms, AXI interface, and TLB MMU support. Achieved a maximum frequency of 45MHz in testing. Won the National Third Prize in the 8th National College Student Computer System Ability Competition (Loongson Cup).
+            </div>
+        </div>
+    </section>
 
+    <footer>
+        <p>© <span id="current-year"></span> Xu Lin. All rights reserved.</p>
+    </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script>
-
-        (function ($) {
-            $.fn.timeline = function () {
-                var selectors = {
-                    id: $(this),
-                    item: $(this).find(".item"),
-                    activeClass: "item--active",
-                    img: ".img"
-                };
-                // 将第一个时间轴项目激活，并设置时间轴背景图片为第一个项目的图片
-                selectors.item.eq(0).addClass(selectors.activeClass);
-                selectors.id.css(
-                    "background-image",
-                    "url(" +
-                    selectors.item.first()
-                        .find(selectors.img)
-                        .attr("src") +
-                    ")"
-                );
-                // 获取时间轴项目的总数
-                var itemLength = selectors.item.length;
-                // 当页面滚动时，触发滚动事件
-                $(window).scroll(function () {
-                    var max, min;
-                    // 获取页面滚动的距离
-                    var pos = $(this).scrollTop();
-                    selectors.item.each(function (i) {
-                        // 获取当前时间轴项目的最小和最大高度
-                        min = $(this).offset().top;
-                        max = $(this).height() + $(this).offset().top;
-                        var that = $(this);
-                        // 如果滚动到最后一个项目，并且超过了当前项目高度的一半，
-                        // 则将最后一个项目设置为激活状态，并设置背景图片为最后一个项目的图片
-                        if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
-                            selectors.item.removeClass(selectors.activeClass);
-                            selectors.id.css(
-                                "background-image",
-                                "url(" +
-                                selectors.item.last()
-                                    .find(selectors.img)
-                                    .attr("src") +
-                                ")"
-                            );
-                            selectors.item.last().addClass(selectors.activeClass);
-                        }
-                        // 如果当前滚动位置在当前项目的最小和最大高度之间，
-                        // 则将当前项目设置为激活状态，并设置背景图片为当前项目的图片
-                        else if (pos <= max - 10 && pos >= min) {
-                            selectors.id.css(
-                                "background-image",
-                                "url(" +
-                                $(this)
-                                    .find(selectors.img)
-                                    .attr("src") +
-                                ")"
-                            );
-                            selectors.item.removeClass(selectors.activeClass);
-                            $(this).addClass(selectors.activeClass);
-                        }
-                    });
-                });
-            };
-        })(jQuery)
-        /*
-        最后，我们调用 timeline 插件并传入时间轴的 ID 作为参数。
-        这将启用时间轴插件并为该时间轴绑定滚动事件。
-        */
-       $("#shell").timeline();
-
-
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
-
 </html>
