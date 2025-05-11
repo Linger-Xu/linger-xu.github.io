@@ -160,33 +160,92 @@
         <div class="project">
             <div class="project-title">Multimodal Fusion-based Emotion Recognition Dataset and Model Construction</div>
             <div class="project-links">
-                <a href="#" target="_blank">[Repository]</a>
-                <a href="#" target="_blank">[Paper]</a>
+                <a href="#" target="_blank">[Paper(available after 2025.5.22)]</a>
             </div>
             <div class="project-description">
-                Designed an emotion recognition model using attention mechanisms to extract audio and video features, with disentangled representation learning to capture cross-modal correlations. Achieved 48.47% accuracy on the challenging VE-8 dataset. This project won the Gold Award in Jilin Province at the China International College Students' Innovation Competition (2024) and was rated as a National College Student Innovation Project.
+                We have designed a multimodal emotion recognition model to address the shortcomings of traditional single modal emotion recognition, such as low robustness and inability to explore correlations between different modalities. In terms of audio, we extracted three complementary features: semantic embedding features provided by Wav2Vec2, MFCC features, and comprehensive audio features, and modeled them with BiLSTM and time series. In terms of vision, we designed a ResNet50 BiLSTM structure to extract spatiotemporal emotion features from videos through residual learning and sequence modeling. In addition, a feature layer fusion method based on multi head attention mechanism is proposed. The accuracy on both MELD and IEMOCAP datasets is better than the baseline method, and further ablation experiments verify the significant improvement in performance under data imbalance.
             </div>
         </div>
         
         <div class="project">
             <div class="project-title">Hex Game Robot Based on Monte Carlo Tree Search (MCTS)</div>
             <div class="project-links">
-                <a href="#" target="_blank">[Repository]</a>
+                <a href="https://github.com/Linger-Xu/Hex" target="_blank">[Repository]</a>
             </div>
             <div class="project-description">
-                Developed a Hex game AI using Monte Carlo Tree Search as the core algorithm, enhanced with max-flow evaluation function and expert strategies ("bridge" operations). Ranked #26 on the botzone platform Hex leaderboard (as of 2025.04.01). Won the National First Prize in the 2024 China Collegiate Computing Contest (Hex category).
+                This project uses Monte Carlo search algorithm as the core search mechanism, combined with maximum flow evaluation function to enhance the evaluation ability of the situation. At the same time, it adopts a win loss judgment mechanism based on parallel search set optimization and integrates a series of expert strategies ("bridge" operations) to improve the adaptability and strategic nature of the algorithm. One of the initial bots of the project ranked 26th on the overall Hex Chess leaderboard on the botzone platform (as of April 1, 2025), and the project won the first prize in the 2024 China University Student Computer Game Competition (Hex Group).
             </div>
         </div>
         
         <div class="project">
             <div class="project-title">Qile Longlong - CPU Based on LoongArch32 Reduced Instruction Set</div>
             <div class="project-links">
-                <a href="#" target="_blank">[Repository]</a>
+                <a href="https://github.com/Linger-Xu/LoongSonCPU" target="_blank">[Repository]</a>
             </div>
             <div class="project-description">
                 Designed a processor implementing the LoongArch32 reduced instruction set with a 6-stage pipeline, supporting 72 integer and privileged instructions (excluding floating-point). Implemented exception and interrupt mechanisms, AXI interface, and TLB MMU support. Achieved a maximum frequency of 45MHz in testing. Won the National Third Prize in the 8th National College Student Computer System Ability Competition (Loongson Cup).
             </div>
         </div>
+
+        <div class="project">
+            <div class="project-title">Movie History and Audience Preference Analysis - Big Data Project with Hadoop & Spark</div>
+            <div class="project-links">
+                <a href="https://github.com/Linger-Xu/FilmDataAnalysis" target="_blank">[Repository]</a>
+            </div>
+            <div class="project-description">
+                Developed a comprehensive big data analysis system to study movie trends and audience preferences using Hadoop HDFS for distributed storage and Spark for data processing. Implemented data cleaning, statistical analysis, and visualization with Python libraries (pandas, matplotlib, seaborn). Key achievements include:
+                <ul>
+                    <li>Analyzed historical trends of movie ratings across years, regions, genres, and directors</li>
+                    <li>Developed a composite scoring system to evaluate film quality by country</li>
+                    <li>Created a "cold movie index" algorithm to identify high-quality underrated films</li>
+                    <li>Discovered seasonal and time-of-day patterns in audience rating behavior</li>
+                    <li>Built a distributed processing cluster with Hadoop 2.7.2 and Spark 2.1.0</li>
+                </ul>
+                The project provides actionable insights for film production, marketing strategies, and academic research in the movie industry.
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">SNL Language Compiler</div>
+            <div class="project-links">
+                <a href="https://github.com/Linger-Xu/Compiler" target="_blank">[Repository]</a>
+            </div>
+            <div class="project-description">
+                A complete compiler for SNL (Simplified Nested Language) implementing lexical analysis (DFA), syntax analysis (recursive descent parsing), semantic analysis with hierarchical symbol tables, and MIPS code generation. Developed in C++ with STL, featuring nested procedure support and stack-based memory management, validated using MARS simulator.
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">CUMCM2023 - Solution for the 2023 National College Student Mathematical Modeling Competition</div>
+            <div class="project-links">
+                <a href="https://github.com/Linger-Xu/CUMCM2023" target="_blank">[Repository]</a>
+            </div>
+            <div class="project-description">
+                This project provides a comprehensive solution for optimizing the pricing and restocking strategies of perishable goods in large supermarkets. It addresses the challenge of short shelf-life and seasonal demand variations by employing advanced analytical techniques such as time series analysis, grey prediction models, and linear programming. The solution includes detailed analysis of sales data, prediction of future sales trends, and optimization of restocking quantities and pricing to maximize profits while minimizing waste. The project was awarded the First Prize in the Jilin Province for the 2023 National College Student Mathematical Modeling Competition.
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Online Bookstore System Based on SpringBoot</div>
+            <div class="project-links">
+                <a href="https://github.com/Linger-Xu/booksystem" target="_blank">[Repository]</a>
+            </div>
+            <div class="project-description">
+                Developed an online bookstore system using SpringBoot framework, featuring a multi-layered architecture including data pers istence (Dao), business logic (Service), and controller layers. Designed three database tables (users, book, buy) with optimized relationships and state management through the 'ret' parameter. Implemented functionalities such as user management, book inventory control, shopping cart, and purchase records. Utilized GPT-4.0 for debugging and problem-solving, enhancing development efficiency. 
+            </div>
+        </div>
+
+        <div class="project">  
+            <div class="project-title">Beverage Wholesale Management System</div>  
+            <div class="project-links">  
+                <a href="https://github.com/Linger-Xu/ProManageSystem" target="_blank">[Repository]</a>  
+            </div>  
+            <div class="project-description">  
+                Developed a C-based beverage wholesale management system using linked lists to handle dynamic data storage. The system features dual subsystems (user and admin) with distinct permissions, supporting operations such as order management (addition, deletion, modification), inventory control, and fuzzy search for products. Implemented a dynamic threshold algorithm for string fuzzy matching to enhance search flexibility. Designed a robust data validation mechanism for user inputs and integrated file I/O for persistent data storage. The project demonstrates strong problem-solving skills in algorithm design and system architecture.  
+            </div>  
+        </div>
+
+
     </section>
 
     <footer>
